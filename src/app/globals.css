@@ -56,6 +56,13 @@ body {
   color: var(--ink);
 }
 
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--bronze-deep);
+  outline-offset: 2px;
+}
+
 @keyframes hero-rise {
   from {
     opacity: 0;

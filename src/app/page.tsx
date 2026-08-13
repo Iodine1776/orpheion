@@ -131,7 +131,7 @@ export default function Home() {
           />
           <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-24 sm:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-32">
             <Reveal as="header">
-              <p className="text-xs font-medium uppercase tracking-[0.22em] text-bronze">
+              <p className="text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
                 Who it&apos;s for
               </p>
               <h2 className="mt-4 max-w-[14ch] text-[clamp(1.85rem,3.5vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em] text-ink">
@@ -204,7 +204,7 @@ export default function Home() {
           />
           <div className="relative mx-auto max-w-6xl px-6 py-24 sm:px-10 lg:py-32">
             <Reveal as="header" className="max-w-2xl">
-              <p className="text-xs font-medium uppercase tracking-[0.22em] text-bronze">
+              <p className="text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
                 Offer
               </p>
               <h2 className="mt-4 text-[clamp(1.85rem,3.5vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em] text-ink">
@@ -276,7 +276,7 @@ export default function Home() {
         <section className="border-b border-stone-200/80 bg-stone-100/60">
           <div className="mx-auto grid max-w-6xl gap-10 px-6 py-24 sm:px-10 lg:grid-cols-2 lg:items-end lg:gap-16 lg:py-32">
             <Reveal>
-              <p className="text-xs font-medium uppercase tracking-[0.22em] text-bronze">
+              <p className="text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
                 Async promise
               </p>
               <h2 className="mt-4 max-w-[16ch] text-[clamp(1.85rem,3.5vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em] text-ink">

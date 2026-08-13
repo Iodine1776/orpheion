@@ -47,7 +47,7 @@ export function LegalShell({ title, updated, children }: LegalShellProps) {
 
       <main id="main" className="flex-1 bg-paper">
         <article className="mx-auto max-w-3xl px-6 py-16 sm:px-10 sm:py-24">
-          <p className="text-xs font-medium uppercase tracking-[0.22em] text-bronze">
+          <p className="text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
             Legal
           </p>
           <h1 className="mt-4 font-[family-name:var(--font-brand)] text-[clamp(2.25rem,5vw,3.5rem)] leading-[1.05] tracking-[-0.02em] text-ink">
