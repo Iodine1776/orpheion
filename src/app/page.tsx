@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { OrpheionMark } from "@/components/OrpheionMark";
 import { Reveal } from "@/components/Reveal";
+import { SiteFooter } from "@/components/SiteFooter";
 
 const mailto =
   "mailto:hello@orpheion.com?subject=Orpheion%20inquiry";
@@ -322,31 +323,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-stone-200/30 bg-ink text-stone-300">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 sm:flex-row sm:items-end sm:justify-between sm:px-10">
-          <div>
-            <p className="inline-flex items-center gap-2.5 text-stone-50">
-              <OrpheionMark decorative className="h-7 w-7 text-stone-50" />
-              <span className="font-[family-name:var(--font-brand)] text-2xl">
-                Orpheion
-              </span>
-            </p>
-            <p className="mt-2 max-w-sm text-sm leading-relaxed text-stone-400">
-              Async design-to-production for agencies. Locked Figma in, live
-              Next.js out.
-            </p>
-          </div>
-          <div className="text-sm text-stone-400">
-            <a
-              href={mailto}
-              className="text-stone-200 transition-colors duration-300 hover:text-stone-50"
-            >
-              hello@orpheion.com
-            </a>
-            <p className="mt-2">© {new Date().getFullYear()} Orpheion LLC</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }
