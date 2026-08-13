@@ -35,14 +35,14 @@ export default function Home() {
       </a>
 
       <header className="relative isolate min-h-[100svh] overflow-hidden text-stone-50">
-        <div className="hero-media-enter absolute inset-0 -z-10">
+        <div className="hero-media-enter absolute inset-0 -z-10 overflow-hidden">
           <Image
             src="/orpheion-hero.jpg"
             alt="Sunlit limestone amphitheater overlooking a Mediterranean hillside"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[42%_55%] sm:object-center"
+            className="hero-kenburns object-cover object-[42%_55%] sm:object-center"
           />
           <div
             className="absolute inset-0 bg-gradient-to-r from-[#231e19]/72 via-[#231e19]/38 to-[#231e19]/12"
@@ -85,7 +85,7 @@ export default function Home() {
             <p className="hero-enter flex items-center gap-3 sm:gap-4">
               <OrpheionMark
                 decorative
-                className="h-[clamp(2.25rem,7vw,3.75rem)] w-[clamp(2.25rem,7vw,3.75rem)] shrink-0 text-stone-50/95"
+                className="lyre-breathe h-[clamp(2.25rem,7vw,3.75rem)] w-[clamp(2.25rem,7vw,3.75rem)] shrink-0 text-stone-50/95"
               />
               <span className="font-[family-name:var(--font-brand)] text-[clamp(3.25rem,12vw,6.75rem)] leading-[0.9] tracking-[-0.02em] text-stone-50">
                 Orpheion
@@ -101,10 +101,10 @@ export default function Home() {
               turns finished design into shipping frontend.
             </p>
 
-            <div className="hero-enter hero-enter-delay-3 mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="hero-enter hero-enter-delay-3 mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
               <a
                 href={mailto}
-                className="inline-flex items-center justify-center bg-stone-50 px-7 py-3.5 text-sm font-medium tracking-wide text-ink transition-[transform,background-color,color] duration-300 hover:-translate-y-0.5 hover:bg-sage-50"
+                className="btn-primary inline-flex items-center justify-center bg-stone-50 px-7 py-3.5 text-sm font-medium tracking-wide text-ink hover:-translate-y-0.5 hover:bg-sage-50"
               >
                 Start a conversation
               </a>
@@ -114,13 +114,19 @@ export default function Home() {
               >
                 See how it works
               </a>
+              <a
+                href="#offer"
+                className="inline-flex items-center justify-center px-1 py-3.5 text-sm tracking-wide text-stone-50/75 underline decoration-stone-50/30 underline-offset-[0.35em] transition-colors duration-300 hover:text-stone-50 hover:decoration-stone-50/60 sm:ml-1"
+              >
+                Pricing
+              </a>
             </div>
           </div>
         </div>
       </header>
 
       <main id="main">
-        <section className="relative overflow-hidden border-b border-stone-200/80 bg-paper">
+        <section className="paper-grain relative overflow-hidden border-b border-stone-200/80 bg-paper">
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.35]"
             style={{
@@ -131,7 +137,7 @@ export default function Home() {
           />
           <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-24 sm:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-32">
             <Reveal as="header">
-              <p className="text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
+              <p className="section-eyebrow text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
                 Who it&apos;s for
               </p>
               <h2 className="mt-4 max-w-[14ch] text-[clamp(1.85rem,3.5vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em] text-ink">
@@ -149,6 +155,9 @@ export default function Home() {
                 Not a design retainer. Not strategy workshops. Not “build
                 anything.” Finished design in; production frontend out.
               </p>
+              <p className="mt-8 max-w-xl text-sm leading-relaxed tracking-wide text-bronze-deep">
+                White-label under your brand · Board + Loom only
+              </p>
             </Reveal>
           </div>
         </section>
@@ -159,7 +168,7 @@ export default function Home() {
         >
           <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 lg:py-32">
             <Reveal as="header" className="max-w-2xl">
-              <p className="text-xs font-medium uppercase tracking-[0.22em] text-stone-300">
+              <p className="section-eyebrow section-eyebrow-on-dark text-xs font-medium uppercase tracking-[0.22em] text-stone-300">
                 How it works
               </p>
               <h2 className="mt-4 text-[clamp(1.85rem,3.5vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em]">
@@ -179,7 +188,7 @@ export default function Home() {
                   delay={(Math.min(i, 3) as 0 | 1 | 2 | 3)}
                   className="grid gap-4 py-10 sm:grid-cols-[5rem_1fr] sm:gap-10 lg:grid-cols-[6rem_14rem_1fr]"
                 >
-                  <span className="font-[family-name:var(--font-brand)] text-3xl leading-none text-stone-300/80">
+                  <span className="step-num font-[family-name:var(--font-brand)] text-3xl leading-none text-stone-300/80">
                     {step.n}
                   </span>
                   <h3 className="text-xl font-medium tracking-[-0.02em] sm:pt-1">
@@ -196,7 +205,7 @@ export default function Home() {
 
         <section
           id="offer"
-          className="relative overflow-hidden border-b border-stone-200/80 bg-paper"
+          className="paper-grain relative overflow-hidden border-b border-stone-200/80 bg-paper"
         >
           <div
             className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-stone-100/70 to-transparent"
@@ -204,7 +213,7 @@ export default function Home() {
           />
           <div className="relative mx-auto max-w-6xl px-6 py-24 sm:px-10 lg:py-32">
             <Reveal as="header" className="max-w-2xl">
-              <p className="text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
+              <p className="section-eyebrow text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
                 Offer
               </p>
               <h2 className="mt-4 text-[clamp(1.85rem,3.5vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em] text-ink">
@@ -217,9 +226,9 @@ export default function Home() {
                 <p className="text-xs font-medium uppercase tracking-[0.18em] text-sage-700">
                   Primary
                 </p>
-                <h3 className="mt-3 font-[family-name:var(--font-brand)] text-[clamp(2.5rem,6vw,4rem)] leading-none tracking-[-0.02em] text-ink">
+                <h3 className="mt-3 font-[family-name:var(--font-brand)] text-[clamp(2.5rem,6vw,4rem)] leading-none tracking-[-0.04em] text-ink">
                   $3,500–$4,500
-                  <span className="ml-2 align-middle text-2xl font-[family-name:var(--font-body)] font-normal text-ink-soft">
+                  <span className="ml-2 align-middle text-2xl font-[family-name:var(--font-body)] font-normal tracking-normal text-ink-soft">
                     / month
                   </span>
                 </h3>
@@ -256,9 +265,11 @@ export default function Home() {
                 <h3 className="mt-3 text-2xl font-medium tracking-[-0.02em] text-ink">
                   Kickoff Sprint
                 </h3>
-                <p className="mt-2 font-[family-name:var(--font-brand)] text-4xl leading-none text-ink">
+                <p className="mt-2 font-[family-name:var(--font-brand)] text-4xl leading-none tracking-[-0.04em] text-ink">
                   $6,500{" "}
-                  <span className="text-2xl text-ink-soft">/ $8,500</span>
+                  <span className="text-2xl tracking-normal text-ink-soft">
+                    / $8,500
+                  </span>
                 </p>
                 <p className="mt-5 text-base leading-relaxed text-ink-muted">
                   For a full multi-page stand-up before — or instead of — entering
@@ -273,10 +284,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-b border-stone-200/80 bg-stone-100/60">
+        <section className="paper-grain border-b border-stone-200/80 bg-stone-100/60">
           <div className="mx-auto grid max-w-6xl gap-10 px-6 py-24 sm:px-10 lg:grid-cols-2 lg:items-end lg:gap-16 lg:py-32">
             <Reveal>
-              <p className="text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
+              <p className="section-eyebrow text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
                 Async promise
               </p>
               <h2 className="mt-4 max-w-[16ch] text-[clamp(1.85rem,3.5vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em] text-ink">
@@ -296,13 +307,26 @@ export default function Home() {
 
         <section className="relative overflow-hidden bg-ink text-stone-50">
           <div
-            className="pointer-events-none absolute inset-0 opacity-40"
-            style={{
-              backgroundImage:
-                "radial-gradient(ellipse at 70% 0%, color-mix(in srgb, var(--sage-700) 55%, transparent), transparent 55%), radial-gradient(ellipse at 10% 100%, color-mix(in srgb, var(--bronze) 28%, transparent), transparent 45%)",
-            }}
+            className="pointer-events-none absolute inset-0"
             aria-hidden
-          />
+          >
+            <Image
+              src="/orpheion-hero.jpg"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-[78%_42%] opacity-[0.14]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/92 to-ink/70" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/50" />
+            <div
+              className="absolute inset-0 opacity-40"
+              style={{
+                backgroundImage:
+                  "radial-gradient(ellipse at 70% 0%, color-mix(in srgb, var(--sage-700) 55%, transparent), transparent 55%), radial-gradient(ellipse at 10% 100%, color-mix(in srgb, var(--bronze) 28%, transparent), transparent 45%)",
+              }}
+            />
+          </div>
           <div className="relative mx-auto max-w-6xl px-6 py-24 sm:px-10 lg:py-32">
             <Reveal className="max-w-2xl">
               <h2 className="font-[family-name:var(--font-brand)] text-[clamp(2.5rem,7vw,4.5rem)] leading-[0.95] tracking-[-0.02em]">
@@ -314,7 +338,7 @@ export default function Home() {
               </p>
               <a
                 href={mailto}
-                className="mt-10 inline-flex items-center justify-center bg-stone-50 px-8 py-4 text-sm font-medium tracking-wide text-ink transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-sage-50"
+                className="btn-primary mt-10 inline-flex items-center justify-center bg-stone-50 px-8 py-4 text-sm font-medium tracking-wide text-ink hover:-translate-y-0.5 hover:bg-sage-50"
               >
                 Email hello@orpheion.com
               </a>
