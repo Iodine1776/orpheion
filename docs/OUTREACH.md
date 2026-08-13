@@ -213,4 +213,44 @@ https://www.orpheion.com
 
 Send **3–5** this week, not 25. Quality > volume.
 
-When someone replies interested, send expectations + pricing from the site and open a Linear **Client —** project.
+When someone replies interested, send expectations + pricing from the site and open a Linear **Client —** project. Do **not** paste Payment Links in cold outreach — save them for reply / close when they’re ready to buy.
+
+---
+
+## Reply / close (when they’re ready)
+
+Use after interest, not in first-touch cold emails. Prefer site + email first; send Payment Links when they ask how to start or confirm a path.
+
+**Payment Links (live):**
+
+- Monthly Design→Production Queue — **$3,500/mo**: https://buy.stripe.com/4gMfZgfF49tG2rE7m53AY00
+- Kickoff Sprint — **$6,500** one-time: https://buy.stripe.com/6oU4gy1OeeO00jwdKt3AY01
+
+### Ready-to-start reply
+
+```
+Great — happy to lock a path.
+
+Monthly queue ($3,500/mo, one active request, pause anytime):
+https://buy.stripe.com/4gMfZgfF49tG2rE7m53AY00
+
+Kickoff Sprint ($6,500 one-time, full stand-up):
+https://buy.stripe.com/6oU4gy1OeeO00jwdKt3AY01
+
+Site / expectations: https://www.orpheion.com
+
+If you want the packet checklist first (locked Figma, brief, assets, copy, access), reply here and I’ll send it before you pay.
+
+— Sam
+```
+
+### Short close (they already chose)
+
+```
+Here’s checkout for the monthly queue:
+https://buy.stripe.com/4gMfZgfF49tG2rE7m53AY00
+
+(or Kickoff Sprint $6,500: https://buy.stripe.com/6oU4gy1OeeO00jwdKt3AY01)
+
+Once payment clears I’ll open the board and send the packet checklist.
+```

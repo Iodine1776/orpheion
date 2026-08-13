@@ -6,6 +6,12 @@ import { SiteFooter } from "@/components/SiteFooter";
 const mailto =
   "mailto:hello@orpheion.com?subject=Orpheion%20inquiry";
 
+/** Live Stripe Payment Links */
+const stripeMonthly =
+  "https://buy.stripe.com/4gMfZgfF49tG2rE7m53AY00";
+const stripeKickoff =
+  "https://buy.stripe.com/6oU4gy1OeeO00jwdKt3AY01";
+
 const steps = [
   {
     n: "01",
@@ -103,10 +109,10 @@ export default function Home() {
 
             <div className="hero-enter hero-enter-delay-3 mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
               <a
-                href={mailto}
+                href={stripeMonthly}
                 className="btn-primary inline-flex items-center justify-center bg-stone-50 px-7 py-3.5 text-sm font-medium tracking-wide text-ink hover:-translate-y-0.5 hover:bg-sage-50"
               >
-                Start a conversation
+                Start monthly queue
               </a>
               <a
                 href="#how"
@@ -256,6 +262,12 @@ export default function Home() {
                     24–48h updates; typical request 2–5 business days after packet
                   </li>
                 </ul>
+                <a
+                  href={stripeMonthly}
+                  className="btn-primary mt-10 inline-flex items-center justify-center bg-ink px-7 py-3.5 text-sm font-medium tracking-wide text-stone-50 hover:-translate-y-0.5 hover:bg-sage-800"
+                >
+                  Start monthly queue — $3,500/mo
+                </a>
               </Reveal>
 
               <Reveal delay={1} className="lg:pt-2">
@@ -279,6 +291,12 @@ export default function Home() {
                 <p className="mt-4 text-sm leading-relaxed text-ink-soft">
                   Standard $6,500 · complex or rush $8,500
                 </p>
+                <a
+                  href={stripeKickoff}
+                  className="mt-8 inline-flex items-center justify-center border border-ink/25 px-7 py-3.5 text-sm font-medium tracking-wide text-ink transition-[transform,background-color,border-color] duration-300 hover:-translate-y-0.5 hover:border-ink/50 hover:bg-stone-100/80"
+                >
+                  Book Kickoff Sprint — $6,500
+                </a>
               </Reveal>
             </div>
           </div>
@@ -333,14 +351,29 @@ export default function Home() {
                 Ready when the file is locked.
               </h2>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-stone-200/90">
-                Tell us about the agency, the overflow, and the next design
-                waiting to ship. We reply on email — then the board.
+                Start the monthly queue when the file is locked — or book a
+                Kickoff Sprint for a full stand-up. Questions still welcome on
+                email.
               </p>
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+                <a
+                  href={stripeMonthly}
+                  className="btn-primary inline-flex items-center justify-center bg-stone-50 px-8 py-4 text-sm font-medium tracking-wide text-ink hover:-translate-y-0.5 hover:bg-sage-50"
+                >
+                  Start monthly queue
+                </a>
+                <a
+                  href={stripeKickoff}
+                  className="inline-flex items-center justify-center border border-stone-50/45 px-8 py-4 text-sm font-medium tracking-wide text-stone-50 transition-[transform,background-color,border-color] duration-300 hover:-translate-y-0.5 hover:border-stone-50 hover:bg-stone-50/10"
+                >
+                  Book Kickoff Sprint
+                </a>
+              </div>
               <a
                 href={mailto}
-                className="btn-primary mt-10 inline-flex items-center justify-center bg-stone-50 px-8 py-4 text-sm font-medium tracking-wide text-ink hover:-translate-y-0.5 hover:bg-sage-50"
+                className="mt-5 inline-flex text-sm tracking-wide text-stone-50/70 underline decoration-stone-50/30 underline-offset-[0.35em] transition-colors duration-300 hover:text-stone-50 hover:decoration-stone-50/60"
               >
-                Email hello@orpheion.com
+                Or email hello@orpheion.com
               </a>
             </Reveal>
           </div>
