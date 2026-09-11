@@ -17,7 +17,7 @@ const body = Outfit({
 const siteUrl = "https://www.orpheion.com";
 const title = "Orpheion | AI Risk Reviews for Insurance Agencies";
 const description =
-  "We review your agency’s AI use and prepare five client AI risk reports with your logo. Agency action plan, producer notes and follow-up. $1,500 total for 60 days.";
+  "Practical help with your agency’s AI use: client information, staff rules and human oversight. An action plan plus five client reports. $1,500 for 60 days.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
