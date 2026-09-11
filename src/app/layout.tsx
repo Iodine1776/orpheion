@@ -15,9 +15,9 @@ const body = Outfit({
 });
 
 const siteUrl = "https://www.orpheion.com";
-const title = "Orpheion — Async design-to-production for agencies";
+const title = "Orpheion — AI Risk Desk for Independent Insurance Agencies";
 const description =
-  "Locked Figma in, live Next.js out. A monthly production queue for design agencies — board + Loom only, no Zoom.";
+  "Agency AI controls and client-facing AI Exposure Snapshots. A $1,500, 60-day pilot for independent commercial insurance agencies.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -64,7 +64,6 @@ const jsonLd = {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
       name: "Orpheion",
-      legalName: "Orpheion LLC",
       url: siteUrl,
       email: "hello@orpheion.com",
       description,
@@ -80,7 +79,7 @@ const jsonLd = {
       description,
       provider: { "@id": `${siteUrl}/#organization` },
       areaServed: "US",
-      serviceType: "Async design-to-production for design agencies",
+      serviceType: "AI-use documentation and client exposure review support for insurance agencies",
       email: "hello@orpheion.com",
     },
   ],

@@ -15,8 +15,7 @@ export function SiteFooter() {
             </span>
           </p>
           <p className="mt-2 max-w-sm text-sm leading-relaxed text-stone-400">
-            Async design-to-production for agencies. Locked Figma in, live
-            Next.js out.
+            AI Risk Desk for independent commercial insurance agencies.
           </p>
         </div>
         <div className="text-sm text-stone-400">
@@ -40,7 +39,7 @@ export function SiteFooter() {
               Privacy
             </a>
           </p>
-          <p className="mt-2">© {new Date().getFullYear()} Orpheion LLC</p>
+          <p className="mt-2">© {new Date().getFullYear()} Orpheion</p>
         </div>
       </div>
     </footer>

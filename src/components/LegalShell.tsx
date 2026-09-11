@@ -55,13 +55,6 @@ export function LegalShell({ title, updated, children }: LegalShellProps) {
           </h1>
           <p className="mt-4 text-sm text-ink-soft">Last updated: {updated}</p>
 
-          <aside className="mt-8 border-l-2 border-bronze/40 pl-4 text-sm leading-relaxed text-ink-muted">
-            This page is standard boilerplate for a US solo / small productized
-            studio. It is <strong className="font-medium text-ink">not</strong>{" "}
-            attorney-reviewed legal advice. Have counsel review before relying on
-            it for high-stakes work.
-          </aside>
-
           <div className="legal-prose mt-12 space-y-10 text-base leading-relaxed text-ink-muted">
             {children}
           </div>

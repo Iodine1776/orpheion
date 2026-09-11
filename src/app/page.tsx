@@ -1,386 +1,45 @@
 import Image from "next/image";
+import Link from "next/link";
 import { OrpheionMark } from "@/components/OrpheionMark";
-import { Reveal } from "@/components/Reveal";
 import { SiteFooter } from "@/components/SiteFooter";
 
-const mailto =
-  "mailto:hello@orpheion.com?subject=Orpheion%20inquiry";
-
-/** Live Stripe Payment Links */
-const stripeMonthly =
-  "https://buy.stripe.com/4gMfZgfF49tG2rE7m53AY00";
-const stripeKickoff =
-  "https://buy.stripe.com/6oU4gy1OeeO00jwdKt3AY01";
-
-const steps = [
-  {
-    n: "01",
-    title: "Lock the file",
-    body: "Ship a locked Figma with brief, assets, copy, and access. Incomplete packets wait — they never become the active request.",
-  },
-  {
-    n: "02",
-    title: "Queue the request",
-    body: "One active request at a time. Backlog stays open; mid-flight redesigns restart unless the change is trivial.",
-  },
-  {
-    n: "03",
-    title: "Loom handoff",
-    body: "Preview on Vercel, walkthrough on Loom, decisions on the board. No status meetings. No Zoom by default.",
-  },
-] as const;
+const inquiry = "mailto:hello@orpheion.com?subject=AI%20Risk%20Desk%20pilot&body=Hi%20Sam%2C%0A%0AI%27m%20interested%20in%20the%20%241%2C500%20AI%20Risk%20Desk%20pilot.%0AAgency%3A%0AMy%20role%3A%0ATeam%20size%3A%0AOne%20AI%20question%20we%27re%20working%20through%3A%0A";
+const included = [
+  ["Your agency", "A clearer picture of your own AI use.", "An inventory of up to ten tools and ten workflows, an approved-use register draft and three priority control recommendations. Each action has an owner and evidence needed to close it."],
+  ["Your clients", "Five useful client conversations.", "Five agency-branded AI Exposure Snapshots, each with a producer brief. Document reported AI use, unresolved questions and practical next steps before a renewal or risk review."],
+  ["Your follow-through", "Keep the open questions moving.", "Two scheduled monitoring reviews, a brief producer training session and a closeout discussion. Record what changed, what still needs a decision and whether the service earned its place."]
+];
 
 export default function Home() {
-  return (
-    <>
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-paper focus:px-4 focus:py-2 focus:text-ink"
-      >
-        Skip to content
-      </a>
-
-      <header className="relative isolate min-h-[100svh] overflow-hidden text-stone-50">
-        <div className="hero-media-enter absolute inset-0 -z-10 overflow-hidden">
-          <Image
-            src="/orpheion-hero.jpg"
-            alt="Sunlit limestone amphitheater overlooking a Mediterranean hillside"
-            fill
-            priority
-            sizes="100vw"
-            className="hero-kenburns object-cover object-[42%_55%] sm:object-center"
-          />
-          <div
-            className="absolute inset-0 bg-gradient-to-r from-[#231e19]/72 via-[#231e19]/38 to-[#231e19]/12"
-            aria-hidden
-          />
-          <div
-            className="absolute inset-0 bg-gradient-to-t from-[#231e19]/55 via-transparent to-[#231e19]/25"
-            aria-hidden
-          />
+  return <>
+    <a href="#main" className="skip-link">Skip to content</a>
+    <header className="risk-header"><nav className="risk-wrap risk-nav" aria-label="Primary">
+      <Link href="/" className="risk-brand"><OrpheionMark decorative className="h-9 w-9" /><span>Orpheion</span></Link>
+      <div className="risk-nav-links"><a href="#sample">The sample</a><a href="#pilot">The pilot</a><a href={inquiry}>Get in touch</a></div>
+    </nav></header>
+    <main id="main">
+      <section className="risk-hero">
+        <div className="risk-wrap risk-hero-grid">
+          <div><p className="risk-eyebrow">AI Risk Desk / Independent commercial agencies</p>
+            <h1>Make AI part of a better client conversation.</h1>
+            <p className="risk-lead">Give your producers a practical way to discuss clients’ AI use—while bringing more structure to your agency’s own.</p>
+            <div className="risk-actions"><a className="risk-button" href={inquiry}>Discuss the $1,500 pilot</a><a className="risk-text-link" href="/Orpheion-AI-Risk-Desk-sample.pdf">Read the sample PDF</a></div>
+            <p className="risk-caption">60 days · Five client reviews · No automatic renewal</p>
+          </div>
+          <div className="risk-hero-art"><Image src="/orpheion-hero.jpg" alt="Sunlit stone amphitheater" fill priority sizes="(max-width: 800px) 100vw, 42vw" className="object-cover" /><div className="risk-art-caption">A clear record.<br />A useful next step.</div></div>
         </div>
-
-        <nav
-          aria-label="Primary"
-          className="hero-enter absolute inset-x-0 top-0 z-10"
-        >
-          <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 sm:px-10 sm:py-6">
-            <a
-              href="/"
-              className="group inline-flex items-center gap-2.5 text-stone-50 transition-opacity duration-300 hover:opacity-90"
-            >
-              <OrpheionMark
-                decorative
-                className="h-8 w-8 shrink-0 text-stone-50 sm:h-9 sm:w-9"
-              />
-              <span className="font-[family-name:var(--font-brand)] text-xl tracking-[-0.02em] sm:text-2xl">
-                Orpheion
-              </span>
-            </a>
-            <a
-              href={mailto}
-              className="text-sm font-medium tracking-wide text-stone-50/90 transition-colors duration-300 hover:text-stone-50"
-            >
-              hello@orpheion.com
-            </a>
-          </div>
-        </nav>
-
-        <div className="mx-auto flex min-h-[100svh] w-full max-w-6xl flex-col justify-end px-6 pb-16 pt-28 sm:px-10 sm:pb-20 lg:justify-center lg:pb-24 lg:pt-32">
-          <div className="max-w-xl lg:max-w-2xl">
-            <p className="hero-enter flex items-center gap-3 sm:gap-4">
-              <OrpheionMark
-                decorative
-                className="lyre-breathe h-[clamp(2.25rem,7vw,3.75rem)] w-[clamp(2.25rem,7vw,3.75rem)] shrink-0 text-stone-50/95"
-              />
-              <span className="font-[family-name:var(--font-brand)] text-[clamp(3.25rem,12vw,6.75rem)] leading-[0.9] tracking-[-0.02em] text-stone-50">
-                Orpheion
-              </span>
-            </p>
-
-            <h1 className="hero-enter hero-enter-delay-1 mt-8 max-w-[18ch] font-[family-name:var(--font-body)] text-[clamp(1.55rem,3.8vw,2.35rem)] font-medium leading-[1.15] tracking-[-0.02em] text-stone-50">
-              Locked Figma in. Live Next.js out.
-            </h1>
-
-            <p className="hero-enter hero-enter-delay-2 mt-5 max-w-[34ch] text-base leading-relaxed text-stone-100/90 sm:text-lg">
-              Async design-to-production for agencies — a monthly queue that
-              turns finished design into shipping frontend.
-            </p>
-
-            <div className="hero-enter hero-enter-delay-3 mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-5">
-              <a
-                href={stripeMonthly}
-                className="btn-primary inline-flex items-center justify-center bg-stone-50 px-7 py-3.5 text-sm font-medium tracking-wide text-ink hover:-translate-y-0.5 hover:bg-sage-50"
-              >
-                Start monthly queue
-              </a>
-              <a
-                href="#how"
-                className="inline-flex items-center justify-center border border-stone-50/45 px-7 py-3.5 text-sm font-medium tracking-wide text-stone-50 transition-[transform,background-color,border-color] duration-300 hover:-translate-y-0.5 hover:border-stone-50 hover:bg-stone-50/10"
-              >
-                See how it works
-              </a>
-              <a
-                href="#offer"
-                className="inline-flex items-center justify-center px-1 py-3.5 text-sm tracking-wide text-stone-50/75 underline decoration-stone-50/30 underline-offset-[0.35em] transition-colors duration-300 hover:text-stone-50 hover:decoration-stone-50/60 sm:ml-1"
-              >
-                Pricing
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <main id="main">
-        <section className="paper-grain relative overflow-hidden border-b border-stone-200/80 bg-paper">
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.35]"
-            style={{
-              backgroundImage:
-                "radial-gradient(ellipse at 12% 0%, color-mix(in srgb, var(--sage-100) 55%, transparent), transparent 55%), radial-gradient(ellipse at 88% 100%, color-mix(in srgb, var(--stone-200) 45%, transparent), transparent 50%)",
-            }}
-            aria-hidden
-          />
-          <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-24 sm:px-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-32">
-            <Reveal as="header">
-              <p className="section-eyebrow text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
-                Who it&apos;s for
-              </p>
-              <h2 className="mt-4 max-w-[14ch] text-[clamp(1.85rem,3.5vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em] text-ink">
-                Agencies with locked designs — and overflow to ship.
-              </h2>
-            </Reveal>
-            <Reveal delay={1} className="flex flex-col justify-end">
-              <p className="max-w-xl text-lg leading-relaxed text-ink-muted">
-                Orpheion is for design agencies and brand studios that already
-                have UI locked in Figma. You keep the creative relationship; we
-                take the production lane — Next.js, Tailwind, Vercel — when your
-                bench is full.
-              </p>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-soft">
-                Not a design retainer. Not strategy workshops. Not “build
-                anything.” Finished design in; production frontend out.
-              </p>
-              <p className="mt-8 max-w-xl text-sm leading-relaxed tracking-wide text-bronze-deep">
-                White-label under your brand · Board + Loom only
-              </p>
-            </Reveal>
-          </div>
-        </section>
-
-        <section
-          id="how"
-          className="border-b border-stone-200/80 bg-sage-800 text-stone-50"
-        >
-          <div className="mx-auto max-w-6xl px-6 py-24 sm:px-10 lg:py-32">
-            <Reveal as="header" className="max-w-2xl">
-              <p className="section-eyebrow section-eyebrow-on-dark text-xs font-medium uppercase tracking-[0.22em] text-stone-300">
-                How it works
-              </p>
-              <h2 className="mt-4 text-[clamp(1.85rem,3.5vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em]">
-                Three moves. Zero meetings.
-              </h2>
-              <p className="mt-5 max-w-xl text-base leading-relaxed text-stone-200/90 sm:text-lg">
-                The queue is simple on purpose — so delivery stays calm when your
-                client calendar is not.
-              </p>
-            </Reveal>
-
-            <ol className="mt-16 space-y-0 divide-y divide-stone-50/15 border-y border-stone-50/15">
-              {steps.map((step, i) => (
-                <Reveal
-                  key={step.n}
-                  as="li"
-                  delay={(Math.min(i, 3) as 0 | 1 | 2 | 3)}
-                  className="grid gap-4 py-10 sm:grid-cols-[5rem_1fr] sm:gap-10 lg:grid-cols-[6rem_14rem_1fr]"
-                >
-                  <span className="step-num font-[family-name:var(--font-brand)] text-3xl leading-none text-stone-300/80">
-                    {step.n}
-                  </span>
-                  <h3 className="text-xl font-medium tracking-[-0.02em] sm:pt-1">
-                    {step.title}
-                  </h3>
-                  <p className="max-w-xl text-base leading-relaxed text-stone-200/85 sm:pt-1 lg:justify-self-end">
-                    {step.body}
-                  </p>
-                </Reveal>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        <section
-          id="offer"
-          className="paper-grain relative overflow-hidden border-b border-stone-200/80 bg-paper"
-        >
-          <div
-            className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-stone-100/70 to-transparent"
-            aria-hidden
-          />
-          <div className="relative mx-auto max-w-6xl px-6 py-24 sm:px-10 lg:py-32">
-            <Reveal as="header" className="max-w-2xl">
-              <p className="section-eyebrow text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
-                Offer
-              </p>
-              <h2 className="mt-4 text-[clamp(1.85rem,3.5vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em] text-ink">
-                A production queue you can pause.
-              </h2>
-            </Reveal>
-
-            <div className="mt-16 grid gap-14 lg:grid-cols-[1.35fr_0.9fr] lg:gap-20">
-              <Reveal>
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-sage-700">
-                  Primary
-                </p>
-                <h3 className="mt-3 font-[family-name:var(--font-brand)] text-[clamp(2.5rem,6vw,4rem)] leading-none tracking-[-0.04em] text-ink">
-                  $3,500–$4,500
-                  <span className="ml-2 align-middle text-2xl font-[family-name:var(--font-body)] font-normal tracking-normal text-ink-soft">
-                    / month
-                  </span>
-                </h3>
-                <p className="mt-6 max-w-lg text-lg leading-relaxed text-ink-muted">
-                  One active request. Unlimited backlog. Pause or cancel anytime.
-                  Billed monthly in advance.
-                </p>
-                <ul className="mt-8 max-w-md space-y-3 text-base text-ink-muted">
-                  <li className="flex gap-3 border-t border-stone-200 pt-3">
-                    <span className="text-bronze" aria-hidden>
-                      —
-                    </span>
-                    Next.js + Tailwind on Vercel, motion when the design asks
-                  </li>
-                  <li className="flex gap-3 border-t border-stone-200 pt-3">
-                    <span className="text-bronze" aria-hidden>
-                      —
-                    </span>
-                    Forms via SaaS destinations; responsive as designed
-                  </li>
-                  <li className="flex gap-3 border-t border-stone-200 pt-3">
-                    <span className="text-bronze" aria-hidden>
-                      —
-                    </span>
-                    24–48h updates; typical request 2–5 business days after packet
-                  </li>
-                </ul>
-                <a
-                  href={stripeMonthly}
-                  className="btn-primary mt-10 inline-flex items-center justify-center bg-ink px-7 py-3.5 text-sm font-medium tracking-wide text-stone-50 hover:-translate-y-0.5 hover:bg-sage-800"
-                >
-                  Start monthly queue — $3,500/mo
-                </a>
-              </Reveal>
-
-              <Reveal delay={1} className="lg:pt-2">
-                <p className="text-xs font-medium uppercase tracking-[0.18em] text-sage-700">
-                  Optional
-                </p>
-                <h3 className="mt-3 text-2xl font-medium tracking-[-0.02em] text-ink">
-                  Kickoff Sprint
-                </h3>
-                <p className="mt-2 font-[family-name:var(--font-brand)] text-4xl leading-none tracking-[-0.04em] text-ink">
-                  $6,500{" "}
-                  <span className="text-2xl tracking-normal text-ink-soft">
-                    / $8,500
-                  </span>
-                </p>
-                <p className="mt-5 text-base leading-relaxed text-ink-muted">
-                  For a full multi-page stand-up before — or instead of — entering
-                  the monthly queue. Same rules: design lock, async only,
-                  frontend-default.
-                </p>
-                <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-                  Standard $6,500 · complex or rush $8,500
-                </p>
-                <a
-                  href={stripeKickoff}
-                  className="mt-8 inline-flex items-center justify-center border border-ink/25 px-7 py-3.5 text-sm font-medium tracking-wide text-ink transition-[transform,background-color,border-color] duration-300 hover:-translate-y-0.5 hover:border-ink/50 hover:bg-stone-100/80"
-                >
-                  Book Kickoff Sprint — $6,500
-                </a>
-              </Reveal>
-            </div>
-          </div>
-        </section>
-
-        <section className="paper-grain border-b border-stone-200/80 bg-stone-100/60">
-          <div className="mx-auto grid max-w-6xl gap-10 px-6 py-24 sm:px-10 lg:grid-cols-2 lg:items-end lg:gap-16 lg:py-32">
-            <Reveal>
-              <p className="section-eyebrow text-xs font-medium uppercase tracking-[0.22em] text-bronze-deep">
-                Async promise
-              </p>
-              <h2 className="mt-4 max-w-[16ch] text-[clamp(1.85rem,3.5vw,2.75rem)] font-medium leading-[1.12] tracking-[-0.025em] text-ink">
-                Board + Loom. Not another calendar invite.
-              </h2>
-            </Reveal>
-            <Reveal delay={1}>
-              <p className="max-w-xl text-lg leading-relaxed text-ink-muted">
-                Default communication is written on a shared board and recorded
-                on Loom. No Zoom discovery calls. No weekly standups. You get
-                production capacity that fits around agency hours — not through
-                them.
-              </p>
-            </Reveal>
-          </div>
-        </section>
-
-        <section className="relative overflow-hidden bg-ink text-stone-50">
-          <div
-            className="pointer-events-none absolute inset-0"
-            aria-hidden
-          >
-            <Image
-              src="/orpheion-hero.jpg"
-              alt=""
-              fill
-              sizes="100vw"
-              className="object-cover object-[78%_42%] opacity-[0.14]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/92 to-ink/70" />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/50" />
-            <div
-              className="absolute inset-0 opacity-40"
-              style={{
-                backgroundImage:
-                  "radial-gradient(ellipse at 70% 0%, color-mix(in srgb, var(--sage-700) 55%, transparent), transparent 55%), radial-gradient(ellipse at 10% 100%, color-mix(in srgb, var(--bronze) 28%, transparent), transparent 45%)",
-              }}
-            />
-          </div>
-          <div className="relative mx-auto max-w-6xl px-6 py-24 sm:px-10 lg:py-32">
-            <Reveal className="max-w-2xl">
-              <h2 className="font-[family-name:var(--font-brand)] text-[clamp(2.5rem,7vw,4.5rem)] leading-[0.95] tracking-[-0.02em]">
-                Ready when the file is locked.
-              </h2>
-              <p className="mt-6 max-w-lg text-lg leading-relaxed text-stone-200/90">
-                Start the monthly queue when the file is locked — or book a
-                Kickoff Sprint for a full stand-up. Questions still welcome on
-                email.
-              </p>
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
-                <a
-                  href={stripeMonthly}
-                  className="btn-primary inline-flex items-center justify-center bg-stone-50 px-8 py-4 text-sm font-medium tracking-wide text-ink hover:-translate-y-0.5 hover:bg-sage-50"
-                >
-                  Start monthly queue
-                </a>
-                <a
-                  href={stripeKickoff}
-                  className="inline-flex items-center justify-center border border-stone-50/45 px-8 py-4 text-sm font-medium tracking-wide text-stone-50 transition-[transform,background-color,border-color] duration-300 hover:-translate-y-0.5 hover:border-stone-50 hover:bg-stone-50/10"
-                >
-                  Book Kickoff Sprint
-                </a>
-              </div>
-              <a
-                href={mailto}
-                className="mt-5 inline-flex text-sm tracking-wide text-stone-50/70 underline decoration-stone-50/30 underline-offset-[0.35em] transition-colors duration-300 hover:text-stone-50 hover:decoration-stone-50/60"
-              >
-                Or email hello@orpheion.com
-              </a>
-            </Reveal>
-          </div>
-        </section>
-      </main>
-
-      <SiteFooter />
-    </>
-  );
+      </section>
+      <section className="risk-section risk-wrap" aria-labelledby="service-title"><p className="risk-eyebrow">One service, two places it matters</p><h2 id="service-title">Inside your agency.<br />Across your commercial book.</h2><div className="risk-three">{included.map(([label,title,body],i)=><article key={label}><p className="risk-index">0{i+1} / {label}</p><h3>{title}</h3><p>{body}</p></article>)}</div></section>
+      <section id="sample" className="risk-sample"><div className="risk-wrap risk-two"><div><p className="risk-eyebrow">See the work before you decide</p><h2>A short report.<br />A specific decision.</h2><p className="risk-lead-small">The sample follows a fictional agency and accounting client from reported AI use to an action plan and producer conversation brief.</p><p>It separates what the client reports, what has not been verified and what needs a human decision. It does not assign a made-up risk score or promise insurance coverage.</p><a className="risk-text-link" href="/Orpheion-AI-Risk-Desk-sample.pdf">Open the six-page sample PDF</a></div><div className="risk-document"><p className="risk-eyebrow">Illustrative client snapshot</p><h3>Henderson Accounting LLC</h3><p className="risk-caption">Fictional example / Not a completed assessment</p><dl><dt>Reported use</dt><dd>An employee has entered client excerpts into a personal AI tool.</dd><dt>Question to resolve</dt><dd>What information was entered, and under which account settings?</dd><dt>Proposed next step</dt><dd>Pause confidential uploads while the tool and permitted uses are reviewed.</dd><dt>Producer discussion</dt><dd>Review the actual policies and the client’s reported activities with a licensed adviser.</dd></dl></div></div></section>
+      <section id="pilot" className="risk-section risk-wrap"><div className="risk-two"><div><p className="risk-eyebrow">The founding pilot</p><h2>Five clients.<br />Sixty days.<br /><span className="risk-price">$1,500 total.</span></h2><p className="risk-lead-small">For one agency team of up to 25 people. Agree on fit, scope and a start date before paying.</p><a className="risk-button" href={inquiry}>Ask about the pilot</a></div><div className="risk-offer"><h3>What is included</h3><ul><li>Agency inventory and action brief: up to ten tools and ten workflows.</li><li>Five two-page client snapshots, each covering up to five AI use cases, with producer briefs.</li><li>Two scheduled monitoring reviews and one correction round per deliverable.</li><li>A 45-minute kickoff, 30-minute producer training and 30-minute closeout.</li></ul><div className="risk-continuation"><h3>Continue only if it is useful.</h3><p>Optional $750/month continuation: a maintained scoped register, monthly monitoring brief, two new or refreshed snapshots a month, quarterly control refresh and a 30-minute monthly review. Month-to-month; unused snapshots do not roll over.</p></div></div></div></section>
+      <section className="risk-process"><div className="risk-wrap risk-section"><p className="risk-eyebrow">How it works</p><h2>Start with a real question.</h2><ol className="risk-three"><li><h3>01 / Confirm fit</h3><p>Identify a current AI use or client question. Nominate an operations owner, a licensed producer reviewer and five suitable clients.</p></li><li><h3>02 / Review and use</h3><p>We prepare the agency brief and client materials from authorized inputs. Your team confirms facts and approves client-facing content.</p></li><li><h3>03 / Decide what comes next</h3><p>Track whether the reports were used, what questions they resolved and the effort involved. Decide whether to continue at day 60.</p></li></ol></div></section>
+      <section className="risk-section risk-wrap risk-faq"><p className="risk-eyebrow">Before you start</p><h2>A clear scope from day one.</h2>
+        <details><summary>Does this replace our licensed producer or legal adviser?</summary><p>No. Orpheion organizes reported AI uses, evidence gaps and proposed controls. Your licensed producer owns insurance advice and reviews client-facing materials. Legal opinions, coverage determinations, software implementation and incident response are outside scope.</p></details>
+        <details><summary>What does our agency need to provide?</summary><p>An authorized sponsor, an operations owner, a licensed producer reviewer and five commercial clients, with at least three having a renewal or planned risk review within 90 days. We agree on a secure transfer method before receiving confidential material. Please do not include client records in your initial email.</p></details>
+        <details><summary>Will this mean lots of meetings?</summary><p>Most work and updates happen in writing. The pilot includes a short kickoff, producer training and closeout; written alternatives can be agreed before starting.</p></details>
+        <details><summary>How do payment and cancellation work?</summary><p>The pilot costs $1,500 upfront after scope and delivery readiness are agreed. There is no automatic renewal. If we cannot start by the agreed date, you may request a refund before work starts. If core deliverables are missing at day 60, notify us; after a ten-business-day opportunity to complete them, you may request a pilot-fee refund. Agreed input delays and scope changes are recorded in writing. See the service terms.</p></details>
+      </section>
+      <section className="risk-close"><div className="risk-wrap"><p className="risk-eyebrow">Orpheion / AI Risk Desk</p><h2>Bring one question.<br />We’ll start there.</h2><p>Tell us your agency, your role and one AI issue you want to work through.</p><a className="risk-button risk-button-light" href={inquiry}>Email Sam about the pilot</a><p className="risk-caption">hello@orpheion.com · Please leave confidential client information out of this first email.</p></div></section>
+    </main><SiteFooter />
+  </>;
 }
