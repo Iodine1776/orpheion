@@ -334,3 +334,10 @@ summary:focus-visible {
 @media(max-width:800px){.risk-hero{padding-block:34px}.risk-section,.risk-sample{padding-block:44px}.risk-founder .risk-two{gap:24px}.risk-hero-report{padding:24px}}
 
 .risk-founder-portrait{display:block;width:144px;height:144px;object-fit:cover;border-radius:8px;margin-bottom:24px}
+
+/* Agency-first pilot: compact opening and clear contact path. */
+.risk-hero h1{font-size:clamp(44px,4.4vw,60px);line-height:1.04;max-width:590px;margin-bottom:22px}
+.risk-hero .risk-lead{font-size:19px;line-height:1.5}.risk-hero .risk-actions{margin-top:24px}
+.risk-hero-report>.risk-text-link{display:inline-block;margin-top:20px}.risk-sample h3{font-size:23px;margin-bottom:16px}
+.risk-sample p+p{margin-top:16px}.risk-caption a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:800px){.risk-hero h1{font-size:clamp(40px,8.5vw,54px)}.risk-hero .risk-lead{font-size:18px}.risk-hero .risk-caption{font-size:13px}.risk-hero .risk-eyebrow{margin-bottom:16px}}
