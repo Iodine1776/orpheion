@@ -324,3 +324,11 @@ summary:focus-visible {
 @media(max-width:800px){.risk-hero-grid{gap:32px}.risk-hero h1{font-size:clamp(44px,9vw,64px)}.risk-lead{font-size:19px}.risk-nav-links{max-width:190px;gap:10px 16px}.risk-hero-report h2{font-size:32px}}
 @media(max-width:400px){.risk-nav{gap:14px}.risk-nav-links{font-size:13px;max-width:145px}.risk-brand{font-size:29px;gap:8px}.risk-brand svg{width:28px}.risk-actions{gap:18px}}
 @media(prefers-reduced-motion:reduce){.risk-button{transition:none}}
+
+/* A clearer service label, shorter opening and visible owner introduction. */
+.risk-brand-name{display:flex;flex-direction:column;line-height:1.05}
+.risk-brand-service{font-family:var(--font-body);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted);margin-top:7px}
+.risk-hero{padding-block:48px}.risk-section,.risk-sample{padding-block:64px}.risk-three{margin-top:32px}
+.risk-hero-report{padding:28px}.risk-hero-report h2{font-size:32px}.risk-hero-report .risk-caption{margin-bottom:16px}.risk-hero-report .risk-report-note{margin-top:18px;padding-top:14px;margin-bottom:16px}
+.risk-founder{border-bottom:1px solid var(--stone-200)}.risk-founder-role{font-size:17px;color:var(--ink-muted);margin-bottom:24px}.risk-founder-copy p{font-size:17px;line-height:1.7;color:var(--ink-muted)}.risk-founder-copy p+p{margin-top:18px}
+@media(max-width:800px){.risk-hero{padding-block:34px}.risk-section,.risk-sample{padding-block:44px}.risk-founder .risk-two{gap:24px}.risk-hero-report{padding:24px}}
