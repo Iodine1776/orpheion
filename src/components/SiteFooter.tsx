@@ -15,7 +15,7 @@ export function SiteFooter() {
             </span>
           </p>
           <p className="mt-2 max-w-sm text-sm leading-relaxed text-stone-400">
-            AI Risk Desk for independent commercial insurance agencies.
+            AI risk reviews for insurance agencies and their clients.
           </p>
         </div>
         <div className="text-sm text-stone-400">

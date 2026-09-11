@@ -15,9 +15,9 @@ const body = Outfit({
 });
 
 const siteUrl = "https://www.orpheion.com";
-const title = "Orpheion — AI Risk Desk for Independent Insurance Agencies";
+const title = "Orpheion | AI Risk Reviews for Insurance Agencies";
 const description =
-  "Agency AI controls and client-facing AI Exposure Snapshots. A $1,500, 60-day pilot for independent commercial insurance agencies.";
+  "We review your agency’s AI use and prepare five client AI risk reports with your logo. Agency action plan, producer notes and follow-up. $1,500 total for 60 days.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
