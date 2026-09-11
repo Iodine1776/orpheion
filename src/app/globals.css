@@ -332,3 +332,5 @@ summary:focus-visible {
 .risk-hero-report{padding:28px}.risk-hero-report h2{font-size:32px}.risk-hero-report .risk-caption{margin-bottom:16px}.risk-hero-report .risk-report-note{margin-top:18px;padding-top:14px;margin-bottom:16px}
 .risk-founder{border-bottom:1px solid var(--stone-200)}.risk-founder-role{font-size:17px;color:var(--ink-muted);margin-bottom:24px}.risk-founder-copy p{font-size:17px;line-height:1.7;color:var(--ink-muted)}.risk-founder-copy p+p{margin-top:18px}
 @media(max-width:800px){.risk-hero{padding-block:34px}.risk-section,.risk-sample{padding-block:44px}.risk-founder .risk-two{gap:24px}.risk-hero-report{padding:24px}}
+
+.risk-founder-portrait{display:block;width:144px;height:144px;object-fit:cover;border-radius:8px;margin-bottom:24px}
