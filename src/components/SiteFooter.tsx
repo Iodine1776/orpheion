@@ -17,6 +17,13 @@ export function SiteFooter() {
           <p className="mt-2 max-w-sm text-sm leading-relaxed text-stone-400">
             AI risk reviews for insurance agencies and their clients.
           </p>
+          <address className="mt-4 text-sm not-italic leading-relaxed text-stone-300">
+            <span className="font-medium">Mailing address</span><br />
+            Orpheion<br />
+            11205 Lebanon Road, Suite 509<br />
+            Mount Juliet, TN 37122-5545
+          </address>
+          <p className="mt-1 text-xs text-stone-400">Mail correspondence only; no walk-in office.</p>
         </div>
         <div className="text-sm text-stone-400">
           <a
