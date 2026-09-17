@@ -32,6 +32,7 @@ export function SiteFooter() {
           >
             hello@orpheion.com
           </a>
+          <p className="mt-2 max-w-xs text-xs leading-relaxed">Questions and introductions only. Please leave confidential files out of your email; we arrange any approved document transfer separately.</p>
           <p className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
             <a
               href="/terms"
