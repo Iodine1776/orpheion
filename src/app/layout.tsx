@@ -15,9 +15,9 @@ const body = Outfit({
 });
 
 const siteUrl = "https://www.orpheion.com";
-const title = "Orpheion | AI Risk Reviews for Insurance Agencies";
+const title = "Orpheion | Practical AI Consulting for Insurance Agencies";
 const description =
-  "Practical help with your agency’s AI use: client information, staff rules and human oversight. Staff rules, an action plan and optional client reports. $1,500 for 60 days.";
+  "An agency AI-use policy, two tested workflows and staff training. $1,500 total, with a two-week setup target and day-30 follow-up. Work directly with Sam Bolton.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -79,7 +79,7 @@ const jsonLd = {
       description,
       provider: { "@id": `${siteUrl}/#organization` },
       areaServed: "US",
-      serviceType: "AI-use documentation and client exposure review support for insurance agencies",
+      serviceType: "Practical AI consulting, agency AI-use policies and workflow training for independent insurance agencies",
       email: "hello@orpheion.com",
     },
   ],

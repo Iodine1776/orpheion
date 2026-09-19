@@ -15,7 +15,7 @@ export function SiteFooter() {
             </span>
           </p>
           <p className="mt-2 max-w-sm text-sm leading-relaxed text-stone-400">
-            AI risk reviews for insurance agencies and their clients.
+            Practical AI consulting for independent insurance agencies.
           </p>
           <address className="mt-4 text-sm not-italic leading-relaxed text-stone-300">
             <span className="font-medium">Mailing address</span><br />

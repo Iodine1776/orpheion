@@ -341,3 +341,8 @@ summary:focus-visible {
 .risk-hero-report>.risk-text-link{display:inline-block;margin-top:20px}.risk-sample h3{font-size:23px;margin-bottom:16px}
 .risk-sample p+p{margin-top:16px}.risk-caption a{text-decoration:underline;text-underline-offset:3px}
 @media(max-width:800px){.risk-hero h1{font-size:clamp(40px,8.5vw,54px)}.risk-hero .risk-lead{font-size:18px}.risk-hero .risk-caption{font-size:13px}.risk-hero .risk-eyebrow{margin-bottom:16px}}
+
+/* Agency AI Setup: concrete samples and first-month sequence. */
+.risk-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:36px;list-style:none}.risk-steps li{border-top:1px solid var(--stone-200);padding-top:22px}.risk-steps h3{font-size:21px;line-height:1.3;margin-bottom:15px}.risk-steps p{font-size:16px;line-height:1.7;color:var(--ink-muted)}.sample-intro{max-width:900px}.sample-intro h1{font-family:var(--font-brand);font-size:clamp(42px,5vw,66px);line-height:1.05;margin-bottom:26px}.sample-prompt{background:var(--stone-100);padding:24px;margin-top:20px;line-height:1.7;font-size:17px;overflow-wrap:anywhere}.sample-list{list-style:disc;padding-left:24px;margin-top:20px;line-height:1.7;color:var(--ink-muted)}.sample-list li+li{margin-top:10px}
+@media(max-width:1000px){.risk-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.risk-steps{grid-template-columns:1fr}.risk-brand-service{font-size:9px;letter-spacing:.08em}.risk-nav-links{max-width:140px}.sample-prompt{padding:18px}}
