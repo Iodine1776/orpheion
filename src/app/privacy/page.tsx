@@ -1,6 +1,6 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { LegalShell } from "@/components/LegalShell";
-export const metadata: Metadata = {title: "Privacy | Orpheion", alternates: {canonical: "/privacy"}};
+export const metadata = pageMetadata("Privacy & Information Handling | Orpheion", "How Orpheion handles website inquiries, AI-assisted correspondence and separately approved confidential intake. Contact us with privacy questions.", "/privacy");
 export default function Privacy(){return <LegalShell title="Privacy and information handling" updated="September 19, 2026">
 <section><h2>Contact and scope</h2><p>Contact Orpheion at hello@orpheion.com with privacy questions or requests. This notice describes the website and inquiry process. Processing of agency or insured information for a paid engagement must be agreed separately before transfer.</p></section>
 <section><h2>Website and inquiries</h2><p>This website provides service information and links that open your email application. It does not contain a client-record upload form. If you email us, we receive the name, email address, message and attachments you choose to send. We use inquiry information to respond, discuss fit and maintain the related business correspondence. Please do not include confidential agency or client information, or sensitive personal information in an initial inquiry.</p></section>

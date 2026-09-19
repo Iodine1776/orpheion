@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/site";
 import { LegalShell } from "@/components/LegalShell";
 import { deliverables, timing } from "@/lib/offer";
-export const metadata: Metadata = {title: "Service terms | Orpheion", description: "Scope, timing, payment and responsibilities for Orpheion Agency AI Setup.", alternates: {canonical: "/terms"}};
+export const metadata = pageMetadata("Agency AI Setup: Scope & Service Terms | Orpheion", "Read the scope, $1,500 fee, setup timing, review responsibilities and cancellation terms for Orpheion Agency AI Setup.", "/terms");
 export default function Terms(){return <LegalShell title="Agency AI Setup service terms" updated="September 19, 2026">
 <section><h2>1. Agree on the engagement before starting</h2><p>Orpheion provides practical AI consulting, agency AI-use documentation and guided workflow setup. An engagement begins only after the parties identify the contracting provider and agency, agree a written scope and start date, and confirm payment. Browsing this site or sending an inquiry does not purchase a service. These terms describe new offers from September 19, 2026. Previously agreed engagements retain their written terms; this update does not shorten or remove previously agreed services. The signed engagement controls if it differs from this summary.</p></section>
 <section><h2>2. Setup scope and price</h2><p>The standard fee is $1,500 total for one team of up to 25 people. We review up to ten tools and ten tasks and develop two agreed workflows. The setup includes:</p><ul>{deliverables.map(item=><li key={item}>{item}</li>)}</ul><p>{timing} Written meeting alternatives require agreement: a kickoff questionnaire and one clarification round, an annotated staff guide and one consolidated Q&amp;A, and a written day-30 review with one consolidated Q&amp;A. These replace meetings. They do not add unlimited email support.</p></section>

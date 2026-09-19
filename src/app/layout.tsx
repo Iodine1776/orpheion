@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
 import "./globals.css";
+import { pageMetadata, siteUrl, siteDescription } from "@/lib/site";
 
 const brand = Cormorant_Garamond({
   variable: "--font-brand",
@@ -14,39 +15,10 @@ const body = Outfit({
   weight: ["400", "500"],
 });
 
-const siteUrl = "https://www.orpheion.com";
-const title = "Orpheion | Practical AI Consulting for Insurance Agencies";
-const description =
-  "An agency AI-use policy, two tested workflows and staff training. $1,500 total, with a two-week setup target and day-30 follow-up. Work directly with Sam Bolton.";
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title,
-  description,
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title,
-    description,
-    url: siteUrl,
-    siteName: "Orpheion",
-    type: "website",
-    images: [
-      {
-        url: "/og.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Sunlit limestone amphitheater — Orpheion",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title,
-    description,
-    images: ["/og.jpg"],
-  },
+  ...pageMetadata("AI Consulting for Insurance Agencies | Orpheion", siteDescription, "/"),
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
 };
 
 export const viewport: Viewport = {
@@ -61,26 +33,20 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": `${siteUrl}/#organization`,
-      name: "Orpheion",
-      url: siteUrl,
-      email: "hello@orpheion.com",
-      description,
-      logo: `${siteUrl}/orpheion-favicon.png`,
-      sameAs: [],
+      "@type": "Organization", "@id": `${siteUrl}/#organization`,
+      name: "Orpheion", url: siteUrl, email: "hello@orpheion.com",
+      description: siteDescription, logo: `${siteUrl}/orpheion-favicon.png`,
+      founder: { "@id": `${siteUrl}/#sam-bolton` },
     },
     {
-      "@type": "ProfessionalService",
-      "@id": `${siteUrl}/#service`,
-      name: "Orpheion",
-      url: siteUrl,
-      image: `${siteUrl}/og.jpg`,
-      description,
-      provider: { "@id": `${siteUrl}/#organization` },
-      areaServed: "US",
-      serviceType: "Practical AI consulting, agency AI-use policies and workflow training for independent insurance agencies",
-      email: "hello@orpheion.com",
+      "@type": "Person", "@id": `${siteUrl}/#sam-bolton`, name: "Sam Bolton",
+      jobTitle: "Owner", url: `${siteUrl}/#meet-sam`,
+      worksFor: { "@id": `${siteUrl}/#organization` },
+    },
+    {
+      "@type": "WebSite", "@id": `${siteUrl}/#website`, url: siteUrl,
+      name: "Orpheion", inLanguage: "en-US",
+      publisher: { "@id": `${siteUrl}/#organization` },
     },
   ],
 };
@@ -94,7 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-paper text-ink">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
         />
         {children}
       </body>
