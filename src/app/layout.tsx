@@ -40,7 +40,7 @@ const jsonLd = {
     },
     {
       "@type": "Person", "@id": `${siteUrl}/#sam-bolton`, name: "Sam Bolton",
-      jobTitle: "Owner", url: `${siteUrl}/#meet-sam`,
+      jobTitle: "Founder", description: "Tennessee-licensed property and casualty insurance producer and ISC2 Certified in Cybersecurity (CC) credential holder with commercial account management, insurance sales and hands-on AI experience.", url: `${siteUrl}/#meet-sam`,
       worksFor: { "@id": `${siteUrl}/#organization` },
     },
     {
